@@ -5,8 +5,8 @@ from feature_extract import extract_features  # import the function above
 
 st.title("🔍 Phishing Website Detection")
 
-# Load your trained model
-with open("models/trained_model.pkl", "rb") as f:
+# Load your model
+with open("models/randomforest.pkl", "rb") as f:
     model = pickle.load(f)
 
 url = st.text_input("Enter website URL:", placeholder="https://example.com")
@@ -38,3 +38,4 @@ if st.button("Predict"):
             st.error("⚠️ This website is **Phishing**!")
         else:
             st.success("✅ This website appears **Legitimate**.")
+
