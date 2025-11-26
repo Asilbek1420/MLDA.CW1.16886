@@ -87,7 +87,7 @@ def extract_features(url):
     features["Redirect"] = 1
 
     # 20. On_mouseover (placeholder)
-    features["On_mouseover"] = 1
+    features["on_mouseover"] = 1
 
     # 21. RightClick (placeholder)
     features["RightClick"] = 1
