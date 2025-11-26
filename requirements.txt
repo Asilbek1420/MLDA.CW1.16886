@@ -1,5 +1,5 @@
-python-whois==0.9.6
-streamlit==1.26.0
-pandas==2.0.3
-scikit-learn==1.3.1
-numpy==1.26.4
+python-whois
+streamlit
+pillow
+pandas
+scikit-learn
