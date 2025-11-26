@@ -10,7 +10,7 @@ st.set_page_config(page_title="Phishing Detection", layout="centered")
 st.markdown("""
 <style>
     .stApp {
-        background-color: #dbe4ee;
+        background-color: #93b2d6;
     }
     .main-header {
         color: #0d47a1;
@@ -109,5 +109,6 @@ if st.button("Predict"):
                     st.markdown("<div class='prediction-result stSuccess'>✅ This website appears **Legitimate**.</div>", unsafe_allow_html=True)
             except Exception as e:
                 st.error(f"Prediction failed. Check that your model expects 30 input features. Error: {e}")
+
 
 
