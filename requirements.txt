@@ -1,5 +1,9 @@
-python-whois
 streamlit
-pillow
 pandas
+numpy
 scikit-learn
+xgboost
+catboost
+dnspython
+python-whois
+requests
