@@ -121,7 +121,7 @@ def extract_features(url):
 
     # 3. Shortening_Service
     short_domains = ["bit.ly", "tinyurl.com", "goo.gl", "ow.ly", "t.co", "is.gd"]
-    features["Shortening_Service"] = -1 if any(sd in full for sd in short_domains) else 1
+    features["Shortining_Service"] = -1 if any(sd in full for sd in short_domains) else 1
 
     # 4. having_At_Symbol
     features["having_At_Symbol"] = -1 if "@" in full else 1
@@ -334,11 +334,11 @@ def extract_features(url):
     # 20. On_mouseover
     try:
         if "onmouseover" in html.lower():
-            features["On_mouseover"] = -1
+            features["on_mouseover"] = -1
         else:
-            features["On_mouseover"] = 1
+            features["on_mouseover"] = 1
     except Exception:
-        features["On_mouseover"] = 0
+        features["on_mouseover"] = 0
 
     # 21. RightClick disabled
     try:
@@ -413,11 +413,11 @@ def extract_features(url):
 
     # Ensure we return only the 30 features and in expected order
     order = [
-        "having_IP_Address","URL_Length","Shortening_Service","having_At_Symbol",
+        "having_IP_Address","URL_Length","Shortining_Service","having_At_Symbol",
         "double_slash_redirecting","Prefix_Suffix","having_Sub_Domain","SSLfinal_State",
         "Domain_registeration_length","Favicon","port","HTTPS_token","Request_URL",
         "URL_of_Anchor","Links_in_tags","SFH","Submitting_to_email","Abnormal_URL",
-        "Redirect","On_mouseover","RightClick","popUpWidnow","Iframe","age_of_domain",
+        "Redirect","on_mouseover","RightClick","popUpWidnow","Iframe","age_of_domain",
         "DNSRecord","web_traffic","Page_Rank","Google_Index","Links_pointing_to_page",
         "Statistical_report"
     ]
