@@ -54,7 +54,7 @@ st.markdown("""
 st.markdown("<h1 class='main-header'>🔍 Phishing Website Detection</h1>", unsafe_allow_html=True)
 st.write("Enter a website URL below to check its likelihood of being a phishing site.")
 
-# Load only RandomForest model
+# Load RandomForest model
 model_path = "models/randomforest.pkl"
 if os.path.exists(model_path):
     try:
@@ -96,7 +96,7 @@ if st.button("Predict"):
         st.subheader("Extracted features (first 10 shown)")
         st.write(X.iloc[0].to_dict())
 
-        # Predict and probabilities
+        # Prediction and probabilities
         try:
             if hasattr(model, "predict_proba"):
                 probs = model.predict_proba(X)[0]
@@ -133,5 +133,6 @@ if st.button("Predict"):
                 st.error("⚠️ Predicted: Phishing")
             else:
                 st.success("✅ Predicted: Legitimate")
+
 
 
