@@ -36,14 +36,14 @@ Final prediction (Phishing / Legitimate)
 
 # 🔧 Installation
 1. Clone the repository
-git clone <your-repo-url>
-cd phishing-detector
+`git clone <your-repo-url>
+cd phishing-detector`
 
 2. Install dependencies
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
-3. Run the application
-streamlit run app.py
+4. Run the application
+`streamlit run app.py`
 
 # 🔍 How It Works
 
