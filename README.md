@@ -27,7 +27,9 @@ Final prediction (Phishing / Legitimate)
 
 # 📁 Project Structure
 `📦 phishing-detector
+
 │
+
 ├── app.py                # Streamlit app 
 
 ├── feature_extract.py    # 30-feature extraction module  
