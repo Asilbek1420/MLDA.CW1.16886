@@ -1,114 +1,112 @@
-🔍 Phishing Website Detection App
-Overview
+Phishing Website Detection – Machine Learning App
 
-This project is a Machine Learning-based web application to detect phishing websites. Users can input a website URL, and the app predicts whether the site is legitimate or phishing.
+This project is a Streamlit web application that predicts whether a website is phishing or legitimate using a Random Forest model trained on a dataset of 30 handcrafted features.
+The system extracts all required URL, domain, and webpage features automatically and performs real-time inference.
 
-The app leverages the UCI Phishing Websites dataset and trained models including:
+🚀 Features
 
-RandomForestClassifier
+Extracts all 30 phishing-detection features, including:
 
-XGBoostClassifier
+URL features (IP usage, “@”, redirects, prefix-suffix)
 
-CatBoostClassifier
+Domain/WHOIS/DNS features (age of domain, DNS record)
 
-GradientBoostingClassifier
+Webpage features (iframe, pop-ups)
 
-K-Nearest Neighbors (KNN)
+Traffic & ranking features
 
-Support Vector Machine (SVM)
+Statistical blacklist features
 
-The app extracts 30 features from a given URL, similar to the dataset features, to perform real-time predictions.
+Simple one-page Streamlit UI
 
-Features
+Shows:
 
-URL-based Feature Extraction: Automatically extracts all 30 UCI phishing dataset features from a URL.
+Extracted features
 
-Multiple ML Models: Supports several trained models for experimentation.
+Final prediction (Phishing / Legitimate)
 
-Real-time Prediction: Users can enter a URL and get a prediction immediately.
+📁 Project Structure
+📦 phishing-detector
+│
+├── app.py                # Streamlit app
+├── feature_extract.py    # 30-feature extraction module
+├── rf_model.pkl          # Trained Random Forest model
+├── requirements.txt      # Dependencies
+└── README.md             # Documentation
 
-Streamlit Interface: Interactive, user-friendly web interface.
+🔧 Installation
+1. Clone the repository
+git clone <your-repo-url>
+cd phishing-detector
 
-Model Evaluation: Full metrics (precision, recall, F1-score) available for each model.
+2. Install dependencies
+pip install -r requirements.txt
 
-Installation
+3. Run the application
+streamlit run app.py
 
-Clone the repository
+🔍 How It Works
 
-git clone <repository_url>
-cd phishing-website-detection
+User enters a website URL
+
+feature_extract.py extracts all 30 features
+
+Features are placed in the correct order
+
+Model prediction is generated:
+
+1 = Legitimate
+
+-1 = Phishing
+
+The UI displays:
+
+Prediction result
+
+Extracted feature values
+
+🧠 Model
+
+Model: RandomForestClassifier
+
+Training: Done offline using the 30-feature phishing dataset
+
+Output:
+
+1 → Legitimate
+
+-1 → Phishing
+
+The trained model is saved as:
+
+rf_model.pkl
+
+📦 Requirements
+
+All Python dependencies are listed in:
+
+requirements.txt
 
 
-Install dependencies
+Install using:
 
 pip install -r requirements.txt
 
+📚 References (Harvard Style)
 
-Ensure trained models are in models/ folder
-For example: models/trained_model.pkl.
+Cloudflare (n.d.) What is a phishing attack? Available at: https://www.cloudflare.com/en-gb/learning/access-management/phishing-attack/
+ (Accessed: DD Month YYYY).
 
-Usage
+UCI Machine Learning Repository (n.d.) Phishing Websites Dataset. Available at: https://archive.ics.uci.edu/
+ (Accessed: DD Month YYYY).
 
-Run the Streamlit app
+Scikit-learn Developers (2024) Random Forest Classifier. Available at: https://scikit-learn.org/
+ (Accessed: DD Month YYYY).
 
-streamlit run app.py
+Streamlit Inc. (2024) Streamlit Documentation. Available at: https://docs.streamlit.io/
+ (Accessed: DD Month YYYY).
 
+✨ Author
 
-Navigate to the Inference Page
-
-Enter a website URL in the input box.
-
-Click Predict.
-
-The app will display:
-
-⚠️ Phishing
-
-✅ Legitimate
-
-Dataset
-
-Source: UCI Phishing Websites Dataset
-
-Features: 30 URL and website-based features (numeric/categorical).
-
-Labels: 1 = Phishing, -1 = Legitimate.
-
-Model Details
-Model	Type	Key Hyperparameters
-RandomForestClassifier	Ensemble / Tree-based	n_estimators=200, class_weight='balanced'
-XGBoostClassifier	Boosting / Tree-based	n_estimators=200, learning_rate=0.1
-CatBoostClassifier	Boosting / Tree-based	iterations=200, learning_rate=0.1
-GradientBoostingClassifier	Boosting / Tree-based	n_estimators=200, learning_rate=0.1
-KNeighborsClassifier	Instance-Based	n_neighbors=7
-SVM (Linear)	Margin-Based	kernel='linear', class_weight='balanced'
-
-Evaluation Metrics: Precision, Recall, F1-score, Accuracy, TPR, TNR, AUC
-
-Ethical Considerations
-
-False Negatives: Some phishing websites may bypass detection. Users should not rely solely on the tool for security.
-
-False Positives: Legitimate websites may be incorrectly flagged.
-
-Disclaimer: This tool is for educational and research purposes and does not guarantee complete protection.
-
-Future Improvements
-
-Implement real-time WHOIS, web traffic, and PageRank features for more accurate predictions.
-
-Add probability scores for phishing risk.
-
-Deploy as a cloud-hosted web app for global accessibility.
-
-Add logging and tracking of predictions for analysis.
-
-Here is my link to the app: https://mldacw116886-ppmxruxbzeur9wbm59h8ur.streamlit.app/
-
-References
-
-UCI Phishing Websites Dataset: https://archive.ics.uci.edu/dataset/327/phishing+websites
-
-Scikit-Learn: https://scikit-learn.org
-
-Streamlit: https://streamlit.io
+Asilbek
+Machine Learning Enthusiast
