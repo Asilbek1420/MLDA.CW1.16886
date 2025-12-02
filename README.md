@@ -26,13 +26,13 @@ Extracted features
 Final prediction (Phishing / Legitimate)
 
 # 📁 Project Structure
-`📦 phishing-detector
+phishing-detector/
 │
-├── app.py                # Streamlit app
-├── feature_extract.py    # 30-feature extraction module
-├── rf_model.pkl          # Trained Random Forest model
-├── requirements.txt      # Dependencies
-└── README.md             # Documentation`
+├── 📄 app.py
+├── ⚙️ feature_extract.py
+├── 🤖 rf_model.pkl
+├── 📦 requirements.txt
+└── 📝 README.md
 
 
 # 🔧 Installation
