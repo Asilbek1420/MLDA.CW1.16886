@@ -38,8 +38,7 @@ Final prediction (Phishing / Legitimate)
 
 ├── requirements.txt      # Dependencies  
 
-└── README.md             # Documentation  
-`
+└── README.md             # Documentation`  
 
 
 # 🔧 Installation
