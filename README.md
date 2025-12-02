@@ -26,7 +26,7 @@ Extracted features
 Final prediction (Phishing / Legitimate)
 
 # 📁 Project Structure
-`📦 phishing-detector
+` 📦 phishing-detector
 
 │
 
@@ -38,7 +38,7 @@ Final prediction (Phishing / Legitimate)
 
 ├── requirements.txt      # Dependencies  
 
-└── README.md             # Documentation`
+└── README.md             # Documentation `
 
 
 # 🔧 Installation
