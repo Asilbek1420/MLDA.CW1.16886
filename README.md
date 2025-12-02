@@ -30,7 +30,7 @@ Final prediction (Phishing / Legitimate)
 │
 ├── app.py                # Streamlit app
 ├── feature_extract.py    # 30-feature extraction module
-├── rf_model.pkl          # Trained Random Forest model
+├── models                # Trained Random Forest model
 ├── requirements.txt      # Dependencies
 └── README.md             # Documentation
 
