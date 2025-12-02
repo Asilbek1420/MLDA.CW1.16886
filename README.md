@@ -1,9 +1,9 @@
-Phishing Website Detection – Machine Learning App
+# Phishing Website Detection – Machine Learning App
 
 This project is a Streamlit web application that predicts whether a website is phishing or legitimate using a Random Forest model trained on a dataset of 30 handcrafted features.
 The system extracts all required URL, domain, and webpage features automatically and performs real-time inference.
 
-🚀 Features
+# 🚀 Features
 
 Extracts all 30 phishing-detection features, including:
 
@@ -25,7 +25,7 @@ Extracted features
 
 Final prediction (Phishing / Legitimate)
 
-📁 Project Structure
+# 📁 Project Structure
 📦 phishing-detector
 │
 ├── app.py                # Streamlit app
@@ -34,7 +34,7 @@ Final prediction (Phishing / Legitimate)
 ├── requirements.txt      # Dependencies
 └── README.md             # Documentation
 
-🔧 Installation
+# 🔧 Installation
 1. Clone the repository
 git clone <your-repo-url>
 cd phishing-detector
@@ -45,7 +45,7 @@ pip install -r requirements.txt
 3. Run the application
 streamlit run app.py
 
-🔍 How It Works
+# 🔍 How It Works
 
 User enters a website URL
 
@@ -53,19 +53,19 @@ feature_extract.py extracts all 30 features
 
 Features are placed in the correct order
 
-Model prediction is generated:
+## Model prediction is generated:
 
 1 = Legitimate
 
 -1 = Phishing
 
-The UI displays:
+## The UI displays:
 
 Prediction result
 
 Extracted feature values
 
-🧠 Model
+# Model
 
 Model: RandomForestClassifier
 
@@ -81,7 +81,7 @@ The trained model is saved as:
 
 rf_model.pkl
 
-📦 Requirements
+# 📦 Requirements
 
 All Python dependencies are listed in:
 
