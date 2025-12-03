@@ -93,7 +93,7 @@ if st.button("Predict"):
 
         X = pd.DataFrame([[feats[k] for k in feature_order]], columns=feature_order)
 
-        st.subheader("Extracted features (first 10 shown)")
+        st.subheader("Extracted features")
         st.write(X.iloc[0].to_dict())
 
         # Prediction and probabilities
@@ -133,6 +133,7 @@ if st.button("Predict"):
                 st.error("⚠️ Predicted: Phishing")
             else:
                 st.success("✅ Predicted: Legitimate")
+
 
 
 
